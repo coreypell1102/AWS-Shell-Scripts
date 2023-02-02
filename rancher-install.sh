@@ -1,1 +1,1 @@
-helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=rancher.cmcloudlab403.info --set replicas=3
+helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=rancher.cmcloudlab462.info --set replicas=3
