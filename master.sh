@@ -15,5 +15,5 @@ echo "Cert Manager Deployed"
 
 #Installs Rancher
 echo "Installing Rancher"
-helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=rancher.cmcloudlab462.info --set replicas=3 --set ingress.tls.source=letsEncrypt --set letsEncrypt.email=pellizzari.corey@gmail.com --set letsEncrypt.ingress.class=nginx --create-namespace
+helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=rancher.cmcloudlab462.info --set replicas=3 --create-namespace
 echo "Installation Finished"
