@@ -17,10 +17,13 @@ echo "CRDs Applied"
 
 #Deploys cert manager
 echo "Deploying Cert Manager"
-helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.5.1
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace
 echo "Cert Manager Deployed"
 
 #Installs Rancher
 echo "Installing Rancher"
-helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=rancher.cmcloudlab462.info --set replicas=3 --create-namespace
+helm install rancher rancher-stable/rancher --namespace cattle-system --set hostname=rancher.cmcloudlab1778.info --set replicas=3 --create-namespace
 echo "Installation Finished"
+
+#check deployment status
+kubectl -n cattle-system rollout status deploy/rancher
